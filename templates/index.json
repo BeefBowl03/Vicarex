@@ -1,1 +1,153 @@
-{"sections":{"image_banner_j4z36Y":{"type":"image-banner","blocks":{"heading_xN9iYn":{"type":"heading","settings":{"heading":"Care Made Simple.","heading_size":"h1"}},"text_DGGHHw":{"type":"text","settings":{"text":"Trusted medical and wellness essentials — all in one place.","text_style":"body"}},"buttons_iF9tbD":{"type":"buttons","settings":{"button_label_1":"Shop Now","button_link_1":"","button_style_secondary_1":false,"button_label_2":"Learn More","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading_xN9iYn","text_DGGHHw","buttons_iF9tbD"],"name":"t:sections.image-banner.presets.name","settings":{"image_overlay_opacity":10,"image_height":"large","image_behavior":"none","desktop_content_position":"middle-left","desktop_content_alignment":"left","show_text_box":true,"color_scheme":"scheme-249b1b19-bcca-45a8-bb4f-4808b3ed0495","stack_images_on_mobile":true,"mobile_content_alignment":"center","show_text_below":true}},"featured-collection":{"type":"featured-collection","settings":{"collection":"all","products_to_show":4,"title":"Featured products","heading_size":"h2","description":"","show_description":false,"description_style":"body","columns_desktop":4,"enable_desktop_slider":false,"full_width":false,"show_view_all":false,"view_all_style":"solid","color_scheme":"scheme-249b1b19-bcca-45a8-bb4f-4808b3ed0495","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":true,"padding_top":56,"padding_bottom":68}}},"order":["image_banner_j4z36Y","featured-collection"]}
+{
+  "sections": {
+    "image_banner_j4z36Y": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_xN9iYn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Care Made Simple.",
+            "heading_size": "h1"
+          }
+        },
+        "text_DGGHHw": {
+          "type": "text",
+          "settings": {
+            "text": "Because you care. So do we. Trusted medical and wellness essentials\u2014all in one place.",
+            "text_style": "body"
+          }
+        },
+        "buttons_iF9tbD": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "/collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_xN9iYn",
+        "text_DGGHHw",
+        "buttons_iF9tbD"
+      ],
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "image_with_text_who_we_are": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_block": {
+          "type": "heading",
+          "settings": {
+            "heading": "Who We Are",
+            "heading_size": "h2"
+          }
+        },
+        "text_block": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We\u2019re a team passionate about making healthcare simpler and more accessible for everyone. Built on trust, compassion, and a commitment to quality, we connect people with reliable medical products designed to support their everyday health.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_block",
+        "text_block"
+      ],
+      "settings": {
+        "image": "",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-5",
+        "color_scheme": "scheme-5",
+        "padding_top": 48,
+        "padding_bottom": 24
+      }
+    },
+    "rich_text_what_we_do": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_block": {
+          "type": "heading",
+          "settings": {
+            "heading": "What We Do",
+            "heading_size": "h2"
+          }
+        },
+        "text_block": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We bring together a curated selection of medical supplies, wellness essentials, and professional-grade equipment\u2014all in one easy-to-navigate online store. Whether for home care or clinic use, we make it easy to find the right products and understand how they work.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_block",
+        "text_block"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "padding_top": 16,
+        "padding_bottom": 40
+      }
+    },
+    "featured_collection_main": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all",
+        "products_to_show": 3,
+        "title": "Featured Collections",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 32,
+        "padding_bottom": 48
+      }
+    }
+  },
+  "order": [
+    "image_banner_j4z36Y",
+    "image_with_text_who_we_are",
+    "rich_text_what_we_do",
+    "featured_collection_main"
+  ]
+}
