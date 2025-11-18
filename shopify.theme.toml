@@ -1,0 +1,5 @@
+# Learn more about configuring your theme at https://shopify.dev/themes/tools/cli/configuration-files
+
+[development]
+store = "vicarexhealth.myshopify.com"
+
