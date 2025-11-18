@@ -8,6 +8,22 @@
     grid-column: auto !important;
     grid-row: auto !important;
   }
+
+  .category-grid__item {
+    min-height: 260px;
+  }
+
+  .category-grid__content {
+    padding: 1.8rem;
+  }
+
+  .category-grid__content h3 {
+    font-size: 2.2rem;
+  }
+
+  .category-grid__content p {
+    font-size: 1.4rem;
+  }
 }
 
 .category-grid__heading {
