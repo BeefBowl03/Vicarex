@@ -12,6 +12,16 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }}-padding .image-with-text__text-item {
+      text-align: center;
+    }
+
+    .section-{{ section.id }}-padding .image-with-text__content {
+      align-items: center;
+    }
+  }
 {%- endstyle -%}
 
 {%- liquid
