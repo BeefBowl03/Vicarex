@@ -65,6 +65,19 @@
           -%}
             {%- assign empty_column = ' multicolumn-list__item--empty' -%}
           {%- endif -%}
+          {%- liquid
+            assign placeholder_asset = ''
+            case block.settings.placeholder_icon
+              when 'shipping'
+                assign placeholder_asset = 'icon-benefit-shipping.svg'
+              when 'delivery'
+                assign placeholder_asset = 'icon-benefit-delivery.svg'
+              when 'value'
+                assign placeholder_asset = 'icon-benefit-value.svg'
+              when 'trusted'
+                assign placeholder_asset = 'icon-benefit-trusted.svg'
+            endcase
+          -%}
 
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
@@ -76,7 +89,7 @@
             {% endif %}
           >
             <div class="multicolumn-card content-container">
-              {%- if block.settings.image != blank -%}
+              {%- if block.settings.image != blank or placeholder_asset != '' -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
                 {% endif %}
@@ -107,14 +120,25 @@
                       (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
                       calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
                     {% endcapture %}
-                    {{
-                      block.settings.image
-                      | image_url: width: 3200
-                      | image_tag:
-                        widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
-                        sizes: sizes,
-                        class: 'multicolumn-card__image'
-                    }}
+                    {%- if block.settings.image != blank -%}
+                      {{
+                        block.settings.image
+                        | image_url: width: 3200
+                        | image_tag:
+                          widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+                          sizes: sizes,
+                          class: 'multicolumn-card__image'
+                      }}
+                    {%- else -%}
+                      <img
+                        src="{{ placeholder_asset | asset_url }}"
+                        alt="{{ block.settings.title | default: 'Benefit icon' | escape }}"
+                        class="multicolumn-card__image"
+                        loading="lazy"
+                        width="80"
+                        height="80"
+                      >
+                    {%- endif -%}
                   </div>
                 </div>
               {%- endif -%}
@@ -408,6 +432,35 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.multicolumn.blocks.column.settings.image.label"
+        },
+        {
+          "type": "select",
+          "id": "placeholder_icon",
+          "label": "Placeholder icon",
+          "info": "Shown when no custom image is selected.",
+          "default": "none",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "shipping",
+              "label": "Shipping / logistics"
+            },
+            {
+              "value": "delivery",
+              "label": "Fast delivery"
+            },
+            {
+              "value": "value",
+              "label": "Amazing value"
+            },
+            {
+              "value": "trusted",
+              "label": "Trusted & proven"
+            }
+          ]
         },
         {
           "type": "inline_richtext",

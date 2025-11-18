@@ -47,6 +47,76 @@
         "show_text_below": false
       }
     },
+    "multicolumn_benefits": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_one": {
+          "type": "column",
+          "settings": {
+            "title": "Free Shipping",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "image": "",
+            "placeholder_icon": "shipping"
+          }
+        },
+        "column_two": {
+          "type": "column",
+          "settings": {
+            "title": "Fast Delivery",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "image": "",
+            "placeholder_icon": "delivery"
+          }
+        },
+        "column_three": {
+          "type": "column",
+          "settings": {
+            "title": "Amazing Value",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "image": "",
+            "placeholder_icon": "value"
+          }
+        },
+        "column_four": {
+          "type": "column",
+          "settings": {
+            "title": "Trusted & Proven",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "image": "",
+            "placeholder_icon": "trusted"
+          }
+        }
+      },
+      "block_order": [
+        "column_one",
+        "column_two",
+        "column_three",
+        "column_four"
+      ],
+      "settings": {
+        "title": "",
+        "image_width": "half",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "button_label": "",
+        "button_link": ""
+      }
+    },
     "image_with_text_who_we_are": {
       "type": "image-with-text",
       "blocks": {
@@ -111,8 +181,83 @@
         "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": false,
-        "padding_top": 16,
-        "padding_bottom": 40
+        "padding_top": 24,
+        "padding_bottom": 32
+      }
+    },
+    "featured_category_grid": {
+      "type": "featured-category-grid",
+      "blocks": {
+        "cat1": {
+          "type": "category",
+          "settings": {
+            "title": "Patient & Provider Care",
+            "subtitle": "Compassionate care in every room",
+            "button_label": "Shop patient care",
+            "button_link": "/collections/all"
+          }
+        },
+        "cat2": {
+          "type": "category",
+          "settings": {
+            "title": "Wound Care Supplies",
+            "subtitle": "Everything you need for healing",
+            "button_label": "Shop wound care",
+            "button_link": "/collections/all"
+          }
+        },
+        "cat3": {
+          "type": "category",
+          "settings": {
+            "title": "Protective Gear",
+            "subtitle": "Safety gear for every shift",
+            "button_label": "Shop protective gear",
+            "button_link": "/collections/all"
+          }
+        },
+        "cat4": {
+          "type": "category",
+          "settings": {
+            "title": "Sanitation & Hygiene",
+            "subtitle": "Keep every space spotless",
+            "button_label": "Shop sanitation",
+            "button_link": "/collections/all"
+          }
+        },
+        "cat5": {
+          "type": "category",
+          "settings": {
+            "title": "Custom Medical Kits",
+            "subtitle": "Tailored kits for any team",
+            "button_label": "Build a kit",
+            "button_link": "/collections/all"
+          }
+        },
+        "cat6": {
+          "type": "category",
+          "settings": {
+            "title": "General Medical Supplies",
+            "subtitle": "Daily essentials you can trust",
+            "button_label": "Shop supplies",
+            "button_link": "/collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "cat1",
+        "cat2",
+        "cat3",
+        "cat4",
+        "cat5",
+        "cat6"
+      ],
+      "settings": {
+        "heading": "What We Offer",
+        "subheading": "",
+        "heading_size": "h2",
+        "color_scheme": "scheme-1",
+        "padding_top": 32,
+        "padding_bottom": 48
       }
     },
     "featured_collection_main": {
@@ -146,8 +291,10 @@
   },
   "order": [
     "image_banner_j4z36Y",
+    "multicolumn_benefits",
     "image_with_text_who_we_are",
     "rich_text_what_we_do",
+    "featured_category_grid",
     "featured_collection_main"
   ]
 }
