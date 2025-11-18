@@ -117,6 +117,36 @@
         "button_link": ""
       }
     },
+    "trust_highlight": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_block": {
+          "type": "heading",
+          "settings": {
+            "heading": "Trusted by clinics, loved by caregivers.",
+            "heading_size": "h3"
+          }
+        },
+        "text_block": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Quality you can depend on \u2014 backed by experience.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_block",
+        "text_block"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
     "image_with_text_who_we_are": {
       "type": "image-with-text",
       "blocks": {
@@ -291,6 +321,7 @@
   },
   "order": [
     "image_banner_j4z36Y",
+    "trust_highlight",
     "multicolumn_benefits",
     "image_with_text_who_we_are",
     "rich_text_what_we_do",

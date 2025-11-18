@@ -14,10 +14,22 @@
   }
 {%- endstyle -%}
 
+{%- assign is_trust_banner = false -%}
+{%- for block in section.blocks -%}
+  {%- if block.type == 'heading' and block.settings.heading != blank and block.settings.heading contains 'Trusted by clinics' -%}
+    {%- assign is_trust_banner = true -%}
+  {%- endif -%}
+{%- endfor -%}
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
-  <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
+  <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding{% if is_trust_banner %} trust-highlight-banner{% endif %}">
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
       <div class="rich-text__blocks {{ section.settings.content_alignment }}">
+        {% if is_trust_banner %}
+          <div class="trust-highlight__icon" aria-hidden="true">
+            <img src="{{ 'shield.png' | asset_url }}" alt="" width="64" height="64" loading="lazy">
+          </div>
+          <div class="trust-highlight__content">
+        {% endif %}
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'heading' -%}
@@ -89,6 +101,9 @@
               </div>
           {%- endcase -%}
         {%- endfor -%}
+        {% if is_trust_banner %}
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
