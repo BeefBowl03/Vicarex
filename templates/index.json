@@ -251,6 +251,7 @@
         "cat2": {
           "type": "category",
           "settings": {
+            "image": "shopify://shop_images/sanitation.png",
             "title": "Wound Care Supplies",
             "subtitle": "Everything you need for healing",
             "button_label": "Shop Now",
@@ -260,6 +261,7 @@
         "cat3": {
           "type": "category",
           "settings": {
+            "image": "shopify://shop_images/3dvisu-A4MkgsyXt1Q-unsplash.jpg",
             "title": "Protective Gear",
             "subtitle": "Safety gear for every shift",
             "button_label": "Shop Now",
@@ -269,6 +271,7 @@
         "cat4": {
           "type": "category",
           "settings": {
+            "image": "shopify://shop_images/hygiene.png",
             "title": "Sanitation & Hygiene",
             "subtitle": "Keep every space spotless",
             "button_label": "Shop Now",
