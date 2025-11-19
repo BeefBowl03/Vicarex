@@ -176,6 +176,7 @@
         "text_block"
       ],
       "settings": {
+        "image": "shopify://shop_images/med.png",
         "height": "medium",
         "desktop_image_width": "medium",
         "layout": "image_first",
