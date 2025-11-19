@@ -44,6 +44,7 @@
         "buttons_iF9tbD"
       ],
       "settings": {
+        "image": "shopify://shop_images/reame.png",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "image_behavior": "none",
