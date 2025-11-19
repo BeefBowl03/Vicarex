@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner_j4z36Y": {
@@ -35,7 +44,6 @@
         "buttons_iF9tbD"
       ],
       "settings": {
-        "value_line_text": "Free & fast shipping · Trusted by clinics · Easy, reliable ordering",
         "image": "shopify://shop_images/care.png",
         "image_overlay_opacity": 40,
         "image_height": "large",
@@ -46,7 +54,8 @@
         "color_scheme": "scheme-3",
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "left",
-        "show_text_below": false
+        "show_text_below": false,
+        "value_line_text": "Free & fast shipping · Trusted by clinics · Easy, reliable ordering"
       }
     },
     "trust_highlight": {
@@ -232,6 +241,7 @@
         "cat1": {
           "type": "category",
           "settings": {
+            "image": "shopify://shop_images/category-patient-provider.png",
             "title": "Patient & Provider Care",
             "subtitle": "Compassionate care in every room",
             "button_label": "Shop Now",
