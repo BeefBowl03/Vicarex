@@ -333,7 +333,6 @@
 {%- if section.settings.use_custom_footer -%}
   <div class="footer-custom__bottom page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <div class="footer-custom__payments" aria-label="Secure payment methods">
-      <span class="footer-custom__payments-label">Secure Payments:</span>
       <ul class="list list-payment footer-custom__payment-logos" role="list">
         {%- assign custom_payment_types = 'visa|master|paypal|shopify_pay' | split: '|' -%}
         {%- for type in custom_payment_types -%}

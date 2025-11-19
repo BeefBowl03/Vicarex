@@ -1,52 +1,96 @@
 {
   "sections": {
-    "image_banner_j4z36Y": {
-      "type": "image-banner",
+    "hero_slideshow": {
+      "type": "slideshow",
       "blocks": {
-        "heading_xN9iYn": {
-          "type": "heading",
+        "slide_1": {
+          "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/care.png",
+            "image_overlay_opacity": 40,
             "heading": "Care Made Simple. Quality You Can Trust.",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "subheading": "Your source for curated medical supplies, wellness essentials, and professional-grade equipment — delivered fast, with clarity and care.",
+            "button_label": "Shop Medical Essentials",
+            "link": "shopify://collections/general-medical-supplies",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "color_scheme": "scheme-3"
           }
         },
-        "text_DGGHHw": {
-          "type": "text",
+        "slide_2": {
+          "type": "slide",
           "settings": {
-            "text": "Your source for curated medical supplies, wellness essentials, and professional-grade equipment — delivered fast, with clarity and care.",
-            "text_style": "body"
+            "image": "",
+            "image_overlay_opacity": 0,
+            "heading": "Slide 2 Heading",
+            "heading_size": "h1",
+            "subheading": "Slide 2 subheading text placeholder",
+            "button_label": "Button Label",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "color_scheme": "scheme-3"
           }
         },
-        "buttons_iF9tbD": {
-          "type": "buttons",
+        "slide_3": {
+          "type": "slide",
           "settings": {
-            "button_label_1": "Shop Medical Essentials",
-            "button_link_1": "shopify://collections/general-medical-supplies",
-            "button_style_secondary_1": false,
-            "button_label_2": "Browse Categories",
-            "button_link_2": "/collections",
-            "button_style_secondary_2": true
+            "image": "",
+            "image_overlay_opacity": 0,
+            "heading": "Slide 3 Heading",
+            "heading_size": "h1",
+            "subheading": "Slide 3 subheading text placeholder",
+            "button_label": "Button Label",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "color_scheme": "scheme-3"
+          }
+        },
+        "slide_4": {
+          "type": "slide",
+          "settings": {
+            "image": "",
+            "image_overlay_opacity": 0,
+            "heading": "Slide 4 Heading",
+            "heading_size": "h1",
+            "subheading": "Slide 4 subheading text placeholder",
+            "button_label": "Button Label",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "color_scheme": "scheme-3"
           }
         }
       },
       "block_order": [
-        "heading_xN9iYn",
-        "text_DGGHHw",
-        "buttons_iF9tbD"
+        "slide_1",
+        "slide_2",
+        "slide_3",
+        "slide_4"
       ],
       "settings": {
-        "image": "shopify://shop_images/care.png",
-        "image_overlay_opacity": 40,
-        "image_height": "large",
+        "layout": "full_bleed",
+        "slide_height": "large",
+        "slider_visual": "counter",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
         "image_behavior": "none",
-        "desktop_content_position": "middle-left",
-        "desktop_content_alignment": "left",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "left",
         "show_text_below": false,
-        "value_line_text": "Free & fast shipping · Trusted by clinics · Easy, reliable ordering"
+        "accessibility_info": "Slideshow about our brand"
       }
     },
     "trust_highlight": {
@@ -373,7 +417,7 @@
     }
   },
   "order": [
-    "image_banner_j4z36Y",
+    "hero_slideshow",
     "trust_highlight",
     "multicolumn_benefits",
     "image_with_text_who_we_are",
