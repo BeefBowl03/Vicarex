@@ -175,11 +175,20 @@
             "text": "<p>We’re a team passionate about making healthcare simpler and more accessible for everyone. Built on trust, compassion, and a commitment to quality, we connect people with reliable medical products designed to support their everyday health.</p>",
             "text_style": "body"
           }
+        },
+        "button_Aj4xci": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "",
+            "button_style_secondary": true
+          }
         }
       },
       "block_order": [
         "heading_block",
-        "text_block"
+        "text_block",
+        "button_Aj4xci"
       ],
       "settings": {
         "image": "shopify://shop_images/med.png",
@@ -213,11 +222,20 @@
             "text": "<p>We bring together a curated selection of medical supplies, wellness essentials, and professional-grade equipment—all in one easy-to-navigate online store. Whether for home care or clinic use, we make it easy to find the right products and understand how they work.</p>",
             "text_style": "body"
           }
+        },
+        "button_rQnxG7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "",
+            "button_style_secondary": true
+          }
         }
       },
       "block_order": [
         "heading_Gz97ze",
-        "text_VWYNUH"
+        "text_VWYNUH",
+        "button_rQnxG7"
       ],
       "settings": {
         "image": "shopify://shop_images/pack.png",
