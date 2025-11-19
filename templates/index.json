@@ -30,7 +30,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Medical Essentials",
-            "button_link_1": "/collections/all",
+            "button_link_1": "shopify://collections/general-medical-supplies",
             "button_style_secondary_1": false,
             "button_label_2": "Browse Categories",
             "button_link_2": "/collections",
@@ -166,7 +166,7 @@
           "type": "heading",
           "settings": {
             "heading": "Who We Are",
-            "heading_size": "h2"
+            "heading_size": "h1"
           }
         },
         "text_block": {
@@ -204,7 +204,7 @@
           "type": "heading",
           "settings": {
             "heading": "What We Do",
-            "heading_size": "h2"
+            "heading_size": "h1"
           }
         },
         "text_VWYNUH": {
@@ -308,7 +308,7 @@
       "settings": {
         "heading": "What We Offer",
         "subheading": "",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "color_scheme": "scheme-1",
         "text_color_scheme": "",
         "padding_top": 32,
