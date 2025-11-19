@@ -315,32 +315,42 @@
         "padding_bottom": 48
       }
     },
-    "featured_collection_main": {
-      "type": "featured-collection",
+    "collage_AWAhNj": {
+      "type": "collage",
+      "blocks": {
+        "image_d3HbBM": {
+          "type": "image",
+          "settings": {}
+        },
+        "product_4Mpkez": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "second_image": false
+          }
+        },
+        "collection_UmBGzV": {
+          "type": "collection",
+          "settings": {
+            "collection": "first-aid-emergency-safety"
+          }
+        }
+      },
+      "block_order": [
+        "image_d3HbBM",
+        "product_4Mpkez",
+        "collection_UmBGzV"
+      ],
+      "name": "t:sections.collage.presets.name",
       "settings": {
-        "collection": "all",
-        "products_to_show": 3,
-        "title": "Featured Collections",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 3,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 32,
-        "padding_bottom": 48
+        "heading": "Multimedia collage",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -351,6 +361,6 @@
     "image_with_text_who_we_are",
     "image_with_text_GiyNVJ",
     "featured_category_grid",
-    "featured_collection_main"
+    "collage_AWAhNj"
   ]
 }
