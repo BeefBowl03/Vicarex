@@ -3607,6 +3607,33 @@ details-disclosure > details {
   opacity: 0.95;
 }
 
+#shopify-section-image_banner_j4z36Y .hero-value-line {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 0.6rem 1.6rem;
+  margin: 1rem auto 0;
+  border-radius: 999px;
+  background: rgba(12, 35, 30, 0.55);
+  color: #f6fef8;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+#shopify-section-image_banner_j4z36Y .hero-value-line::before {
+  content: '★';
+  font-size: 1.2em;
+  color: #ffd467;
+}
+
+#shopify-section-image_banner_j4z36Y .hero-value-line::after {
+  content: '';
+}
+
 #shopify-section-image_banner_j4z36Y .button--primary {
   background-color: #2d9970;
   border-color: #2d9970;
@@ -3725,6 +3752,7 @@ details-disclosure > details {
 
 .footer-custom__column--about {
   max-width: 360px;
+  padding-right: 2.5rem;
 }
 
 .footer-custom__logo {
@@ -3862,6 +3890,7 @@ details-disclosure > details {
 
   .footer-custom__column--about {
     max-width: 100%;
+    padding-right: 0;
   }
 
   .footer-custom__bottom {

@@ -130,6 +130,9 @@
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
               <p>{{ block.settings.text }}</p>
             </div>
+            {%- if section.settings.value_line_text != blank -%}
+              <p class="hero-value-line">{{ section.settings.value_line_text }}</p>
+            {%- endif -%}
           {%- when 'buttons' -%}
             <div
               class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
@@ -358,6 +361,13 @@
       "id": "show_text_below",
       "default": true,
       "label": "t:sections.image-banner.settings.show_text_below.label"
+    },
+    {
+      "type": "text",
+      "id": "value_line_text",
+      "label": "Hero value line",
+      "info": "Short line of benefits shown below the hero copy.",
+      "default": "Free & fast shipping · Trusted by clinics · Easy, reliable ordering"
     }
   ],
   "blocks": [

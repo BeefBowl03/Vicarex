@@ -15,26 +15,26 @@
         "heading_xN9iYn": {
           "type": "heading",
           "settings": {
-            "heading": "Care Made Simple.",
+            "heading": "Care Made Simple. Quality You Can Trust.",
             "heading_size": "h1"
           }
         },
         "text_DGGHHw": {
           "type": "text",
           "settings": {
-            "text": "Because you care. So do we. Trusted medical and wellness essentials—<strong>all in one place.</strong>",
+            "text": "Your source for curated medical supplies, wellness essentials, and professional-grade equipment — delivered fast, with clarity and care.",
             "text_style": "body"
           }
         },
         "buttons_iF9tbD": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Now",
+            "button_label_1": "Shop Medical Essentials",
             "button_link_1": "/collections/all",
             "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_label_2": "Browse Categories",
+            "button_link_2": "/collections",
+            "button_style_secondary_2": true
           }
         }
       },
@@ -48,12 +48,13 @@
         "image_overlay_opacity": 40,
         "image_height": "large",
         "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
         "show_text_box": false,
         "color_scheme": "scheme-3",
+        "value_line_text": "Free & fast shipping · Trusted by clinics · Easy, reliable ordering",
         "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "show_text_below": false
       }
     },
