@@ -191,34 +191,42 @@
         "padding_bottom": 24
       }
     },
-    "rich_text_what_we_do": {
-      "type": "rich-text",
+    "image_with_text_GiyNVJ": {
+      "type": "image-with-text",
       "blocks": {
-        "heading_block": {
+        "heading_Gz97ze": {
           "type": "heading",
           "settings": {
             "heading": "What We Do",
             "heading_size": "h2"
           }
         },
-        "text_block": {
+        "text_VWYNUH": {
           "type": "text",
           "settings": {
-            "text": "<p>We bring together a curated selection of medical supplies, wellness essentials, and professional-grade equipment—all in one easy-to-navigate online store. Whether for home care or clinic use, we make it easy to find the right products and understand how they work.</p>"
+            "text": "<p>We bring together a curated selection of medical supplies, wellness essentials, and professional-grade equipment—all in one easy-to-navigate online store. Whether for home care or clinic use, we make it easy to find the right products and understand how they work.</p>",
+            "text_style": "body"
           }
         }
       },
       "block_order": [
-        "heading_block",
-        "text_block"
+        "heading_Gz97ze",
+        "text_VWYNUH"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": false,
-        "padding_top": 24,
-        "padding_bottom": 32
+        "image": "shopify://shop_images/pack.png",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-5",
+        "color_scheme": "scheme-5",
+        "padding_top": 48,
+        "padding_bottom": 24
       }
     },
     "featured_category_grid": {
@@ -331,7 +339,7 @@
     "trust_highlight",
     "multicolumn_benefits",
     "image_with_text_who_we_are",
-    "rich_text_what_we_do",
+    "image_with_text_GiyNVJ",
     "featured_category_grid",
     "featured_collection_main"
   ]
