@@ -92,6 +92,7 @@
         "column_one": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/free_ship.png",
             "placeholder_icon": "shipping",
             "title": "Free Shipping",
             "text": "",
@@ -102,6 +103,7 @@
         "column_two": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/time.png",
             "placeholder_icon": "delivery",
             "title": "Fast Delivery",
             "text": "",
@@ -112,6 +114,7 @@
         "column_three": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/discount.png",
             "placeholder_icon": "value",
             "title": "Amazing Value",
             "text": "",
@@ -122,6 +125,7 @@
         "column_four": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/trust.png",
             "placeholder_icon": "trusted",
             "title": "Trusted & Proven",
             "text": "",
