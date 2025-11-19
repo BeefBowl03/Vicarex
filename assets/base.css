@@ -2723,8 +2723,14 @@ details[open] .modal-overlay::after {
   transition: transform 150ms ease, opacity 150ms ease;
 }
 
+.header__icon--menu .icon.icon-shopping-bag {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
 details:not([open]) > .header__icon--menu .icon-close,
-details[open] > .header__icon--menu .icon-hamburger {
+details[open] > .header__icon--menu .icon-shopping-bag {
   visibility: hidden;
   opacity: 0;
   transform: scale(0.8);
@@ -2734,7 +2740,7 @@ details[open] > .header__icon--menu .icon-hamburger {
   visibility: hidden;
 }
 
-.js details[open]:not(.menu-opening) > .header__icon--menu .icon-hamburger {
+.js details[open]:not(.menu-opening) > .header__icon--menu .icon-shopping-bag {
   visibility: visible;
   opacity: 1;
   transform: scale(1.07);
