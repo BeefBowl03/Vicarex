@@ -72,7 +72,22 @@
     >
   {%- endif -%}
 
-  {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
+  {% liquid
+    assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'
+    assign supplement_media = product.metafields.custom.supplement_facts
+    if supplement_media == blank
+      assign supplement_media = product.metafields.custom.supplement_fact
+    endif
+    assign supplement_media_value = blank
+    if supplement_media != blank
+      if supplement_media.value != blank
+        assign supplement_media_value = supplement_media.value
+      else
+        assign supplement_media_value = supplement_media
+      endif
+    endif
+    assign product_disclaimer_drop = product.metafields.custom.disclaimer
+  %}
   <div class="page-width">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
@@ -192,7 +207,7 @@
                   {%- endif -%}
                 </p>
               {%- when 'description' -%}
-                {%- if product.description != blank -%}
+                {%- if product.description != blank and section.settings.description_below_media == false -%}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                     {{ product.description }}
                   </div>
@@ -736,6 +751,42 @@
       {{ product | structured_data }}
     </script>
   </div>
+  {% if section.settings.description_below_media %}
+    {% if product.description != blank or supplement_media_value != blank or product_disclaimer_drop != blank %}
+      <div class="product__details-fullwidth">
+        <div class="page-width">
+          <div class="product__details-row quick-add-hidden">
+            {% if product.description != blank or product_disclaimer_drop != blank %}
+              <div class="product__details-description-column">
+                {% if product.description != blank %}
+                  <div class="product__details-description product__description rte">
+                    {{ product.description }}
+                  </div>
+                {% endif %}
+                {% if product_disclaimer_drop != blank %}
+                  <div class="product__details-disclaimer rte">
+                    <strong>Disclaimer:</strong>
+                    {{ product_disclaimer_drop | metafield_tag }}
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+            {% if supplement_media_value != blank %}
+              <div class="product__details-supplement">
+                <img
+                  src="{{ supplement_media_value | image_url: width: 900 }}"
+                  alt="{{ supplement_media_value.alt | default: product.title | append: ' supplement facts' }}"
+                  loading="lazy"
+                  width="{{ supplement_media_value.width }}"
+                  height="{{ supplement_media_value.height }}"
+                >
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endif %}
 </product-info>
 
 {% schema %}
@@ -2206,6 +2257,13 @@
       ],
       "default": "left",
       "label": "t:sections.main-product.settings.media_position.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "description_below_media",
+      "default": true,
+      "label": "Show description below media gallery",
+      "info": "Moves the product description below the main media and pairs it with the supplement facts metafield image."
     },
     {
       "type": "select",
