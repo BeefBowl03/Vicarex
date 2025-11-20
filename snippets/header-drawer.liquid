@@ -12,7 +12,7 @@
       aria-label="{{ 'sections.header.menu' | t }}"
     >
       <span>
-        <img src="{{ 'shopping cart.png' | asset_url }}" alt="{{ 'sections.header.menu' | t }}" class="icon icon-shopping-bag" width="32" height="32">
+        {{- 'icon-hamburger.svg' | inline_asset_content -}}
         {{- 'icon-close.svg' | inline_asset_content -}}
       </span>
     </summary>
