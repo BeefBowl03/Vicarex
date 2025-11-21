@@ -1,0 +1,156 @@
+/* About Us Page Professional Styling */
+
+/* Hero Section - First Rich Text Section */
+.rich-text:first-of-type .rich-text__heading.h0 {
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  font-size: 4.8rem;
+}
+
+@media screen and (max-width: 749px) {
+  .rich-text:first-of-type .rich-text__heading.h0 {
+    font-size: 3.2rem;
+    letter-spacing: 0.1em;
+  }
+}
+
+.rich-text:first-of-type .rich-text__caption {
+  font-size: 2rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(var(--color-foreground), 0.75);
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 750px) {
+  .rich-text:first-of-type .rich-text__caption {
+    font-size: 2.4rem;
+  }
+}
+
+/* Content Sections Styling - Sections after hero */
+.rich-text:not(:first-of-type) .rich-text__heading {
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 2px solid rgba(var(--color-foreground), 0.12);
+  position: relative;
+  font-size: 3.2rem;
+}
+
+.rich-text:not(:first-of-type) .rich-text__heading::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: rgba(var(--color-foreground), 0.25);
+}
+
+@media screen and (max-width: 749px) {
+  .rich-text:not(:first-of-type) .rich-text__heading {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+  
+  .rich-text:not(:first-of-type) .rich-text__heading::after {
+    width: 60px;
+    height: 2px;
+  }
+}
+
+/* Enhanced Typography for Content Sections */
+.rich-text:not(:first-of-type) .rich-text__text {
+  font-size: 1.6rem;
+  line-height: 1.85;
+  color: rgba(var(--color-foreground), 0.88);
+}
+
+.rich-text:not(:first-of-type) .rich-text__text p {
+  margin-bottom: 1.8rem;
+}
+
+.rich-text:not(:first-of-type) .rich-text__text p:last-child {
+  margin-bottom: 0;
+}
+
+.rich-text:not(:first-of-type) .rich-text__text strong {
+  font-weight: 600;
+  color: rgba(var(--color-foreground), 1);
+}
+
+@media screen and (min-width: 750px) {
+  .rich-text:not(:first-of-type) .rich-text__text {
+    font-size: 1.7rem;
+    line-height: 1.9;
+  }
+  
+  .rich-text:not(:first-of-type) .rich-text__blocks {
+    max-width: 90rem;
+  }
+}
+
+/* Improved Readability */
+.rich-text:not(:first-of-type) .rich-text__text p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+@media screen and (max-width: 749px) {
+  .rich-text:not(:first-of-type) .rich-text__text p {
+    text-align: left;
+  }
+}
+
+/* Professional Section Spacing */
+.rich-text:not(:first-of-type) {
+  margin-top: 1rem;
+}
+
+/* Enhanced Container for Better Readability */
+.page-width .rich-text__blocks {
+  max-width: 90rem;
+}
+
+@media screen and (min-width: 990px) {
+  .page-width .rich-text__blocks {
+    max-width: 100rem;
+  }
+}
+
+/* Intro Section Special Styling (Second Section) */
+.rich-text:nth-of-type(2) .rich-text__text {
+  font-size: 1.7rem;
+  line-height: 1.9;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 750px) {
+  .rich-text:nth-of-type(2) .rich-text__text {
+    font-size: 1.8rem;
+    line-height: 2;
+  }
+}
+
+/* Section Dividers for Visual Separation */
+.rich-text:not(:first-of-type):not(:last-of-type) {
+  position: relative;
+}
+
+/* Subtle background variation for content sections */
+.rich-text:not(:first-of-type) .rich-text__blocks {
+  padding: 2rem 0;
+}
+
+@media screen and (min-width: 750px) {
+  .rich-text:not(:first-of-type) .rich-text__blocks {
+    padding: 2.5rem 0;
+  }
+}
+
