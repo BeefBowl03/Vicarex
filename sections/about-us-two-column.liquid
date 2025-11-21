@@ -1,0 +1,215 @@
+{{ 'section-about-us-two-column.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="isolate page-width">
+  <div class="about-us-two-column content-container color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+    <div class="about-us-two-column__container">
+      <div class="about-us-two-column__column about-us-two-column__column--left">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'left_image' and block.settings.image != blank -%}
+            <div class="about-us-two-column__image" {{ block.shopify_attributes }}>
+              {{
+                block.settings.image
+                | image_url: width: 800
+                | image_tag: loading: 'lazy', alt: block.settings.image.alt
+              }}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'left_heading' -%}
+            <h2 class="about-us-two-column__heading {{ section.settings.heading_size }}" {{ block.shopify_attributes }}>
+              {{ block.settings.heading }}
+            </h2>
+          {%- elsif block.type == 'left_text' -%}
+            <div class="about-us-two-column__text rte" {{ block.shopify_attributes }}>
+              {{ block.settings.text }}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      
+      <div class="about-us-two-column__column about-us-two-column__column--right">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'right_image' and block.settings.image != blank -%}
+            <div class="about-us-two-column__image" {{ block.shopify_attributes }}>
+              {{
+                block.settings.image
+                | image_url: width: 800
+                | image_tag: loading: 'lazy', alt: block.settings.image.alt
+              }}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'right_heading' -%}
+            <h2 class="about-us-two-column__heading {{ section.settings.heading_size }}" {{ block.shopify_attributes }}>
+              {{ block.settings.heading }}
+            </h2>
+          {%- elsif block.type == 'right_text' -%}
+            <div class="about-us-two-column__text rte" {{ block.shopify_attributes }}>
+              {{ block.settings.text }}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "About Us Two Column",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "left_image",
+      "name": "Left Column Image",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "left_heading",
+      "name": "Left Column Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading",
+          "default": "⭐ WHO WE ARE"
+        }
+      ]
+    },
+    {
+      "type": "left_text",
+      "name": "Left Column Text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Add your text here.</p>"
+        }
+      ]
+    },
+    {
+      "type": "right_image",
+      "name": "Right Column Image",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "right_heading",
+      "name": "Right Column Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading",
+          "default": "⭐ WHAT WE DO"
+        }
+      ]
+    },
+    {
+      "type": "right_text",
+      "name": "Right Column Text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Add your text here.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Us Two Column"
+    }
+  ]
+}
+{% endschema %}
+

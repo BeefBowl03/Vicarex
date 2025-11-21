@@ -1,0 +1,40 @@
+/* About Us Intro Section - Image on Top Layout */
+/* This targets the intro section specifically when desktop_image_width is 'full' */
+
+.image-with-text__media-item--full .image-with-text__grid {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.image-with-text__media-item--full.image-with-text__media-item {
+  order: 1 !important;
+  width: 100% !important;
+  margin-bottom: 3rem;
+  grid-column: 1 / -1 !important;
+}
+
+.image-with-text__media-item--full ~ .image-with-text__text-item {
+  order: 2 !important;
+  width: 100% !important;
+  grid-column: 1 / -1 !important;
+}
+
+@media screen and (min-width: 750px) {
+  .image-with-text__media-item--full.image-with-text__media-item {
+    margin-bottom: 4rem;
+  }
+}
+
+/* Ensure image is full width and styled */
+.image-with-text__media-item--full .image-with-text__media {
+  width: 100%;
+}
+
+.image-with-text__media-item--full .image-with-text__media img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+

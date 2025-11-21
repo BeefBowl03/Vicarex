@@ -1,0 +1,114 @@
+/* About Us Two Column Section */
+
+.about-us-two-column {
+  z-index: 1;
+}
+
+.about-us-two-column__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .about-us-two-column__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.about-us-two-column__column {
+  width: 100%;
+}
+
+.about-us-two-column__image {
+  margin-bottom: 2.5rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.about-us-two-column__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 750px) {
+  .about-us-two-column__image {
+    margin-bottom: 3rem;
+  }
+}
+
+.about-us-two-column__heading {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 2px solid rgba(var(--color-foreground), 0.12);
+  position: relative;
+  font-size: 3.2rem;
+}
+
+.about-us-two-column__heading::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: rgba(var(--color-foreground), 0.25);
+}
+
+@media screen and (max-width: 749px) {
+  .about-us-two-column__heading {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  
+  .about-us-two-column__heading::after {
+    width: 60px;
+    height: 2px;
+  }
+}
+
+.about-us-two-column__text {
+  font-size: 1.6rem;
+  line-height: 1.85;
+  color: rgba(var(--color-foreground), 0.88);
+}
+
+.about-us-two-column__text p {
+  margin-bottom: 1.8rem;
+}
+
+.about-us-two-column__text p:last-child {
+  margin-bottom: 0;
+}
+
+.about-us-two-column__text strong {
+  font-weight: 600;
+  color: rgba(var(--color-foreground), 1);
+}
+
+@media screen and (min-width: 750px) {
+  .about-us-two-column__text {
+    font-size: 1.7rem;
+    line-height: 1.9;
+  }
+}
+
+.about-us-two-column__text p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+@media screen and (max-width: 749px) {
+  .about-us-two-column__text p {
+    text-align: left;
+  }
+}
+

@@ -33,143 +33,148 @@
       }
     },
     "intro_section": {
-      "type": "rich-text",
+      "type": "image-with-text",
       "blocks": {
-        "text": {
+        "heading_block": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_block": {
           "type": "text",
           "settings": {
-            "text": "<p>At VICAREX Health, we stand as a trusted leader in the global medical-supply industry, supported by more than a decade of expertise, integrity, and unwavering dedication to those we serve. Our company is built on the belief that every individual deserves access to dependable, high-quality medical products—delivered with compassion, clarity, and professional excellence.</p><p>Over the years, we have proudly supported thousands of satisfied customers across the United States and around the world, supplying medical essentials that meet the highest standards of safety, reliability, and clinical quality. We are driven by a single guiding principle: when people care about their health and the well-being of their loved ones, they deserve a company that cares with equal commitment.</p><p>We curate a premium selection of non-prescription medical supplies, home-care essentials, wellness solutions, and professional-grade healthcare products—all available through a seamless online platform designed for speed, convenience, and confidence. Our upcoming mobile app and enhanced digital store provide effortless access, secure ordering, shipment tracking, and 24/7 customer support, ensuring healthcare is always within reach.</p><p>At VICAREX Health, we don't simply provide products—we elevate the healthcare experience, making it more efficient, more accessible, and more dependable for every customer who trusts us.</p><p><strong>Because you care, so do we.</strong></p>"
+            "text": "<p>At VICAREX Health, we stand as a trusted leader in the global medical-supply industry, supported by more than a decade of expertise, integrity, and unwavering dedication to those we serve. Our company is built on the belief that every individual deserves access to dependable, high-quality medical products—delivered with compassion, clarity, and professional excellence.</p><p>Over the years, we have proudly supported thousands of satisfied customers across the United States and around the world, supplying medical essentials that meet the highest standards of safety, reliability, and clinical quality. We are driven by a single guiding principle: when people care about their health and the well-being of their loved ones, they deserve a company that cares with equal commitment.</p><p>We curate a premium selection of non-prescription medical supplies, home-care essentials, wellness solutions, and professional-grade healthcare products—all available through a seamless online platform designed for speed, convenience, and confidence. Our upcoming mobile app and enhanced digital store provide effortless access, secure ordering, shipment tracking, and 24/7 customer support, ensuring healthcare is always within reach.</p><p>At VICAREX Health, we don't simply provide products—we elevate the healthcare experience, making it more efficient, more accessible, and more dependable for every customer who trusts us.</p><p><strong>Because you care, so do we.</strong></p>",
+            "text_style": "body"
           }
         }
       },
       "block_order": [
-        "text"
+        "text_block"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "left",
+        "image": "",
+        "height": "small",
+        "desktop_image_width": "full",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-1",
-        "full_width": false,
         "padding_top": 40,
         "padding_bottom": 40
       }
     },
-    "who_we_are": {
-      "type": "rich-text",
+    "who_we_are_what_we_do": {
+      "type": "about-us-two-column",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "left_image": {
+          "type": "left_image",
           "settings": {
-            "heading": "⭐ WHO WE ARE",
-            "heading_size": "h1"
+            "image": ""
           }
         },
-        "text": {
-          "type": "text",
+        "left_heading": {
+          "type": "left_heading",
+          "settings": {
+            "heading": "⭐ WHO WE ARE"
+          }
+        },
+        "left_text": {
+          "type": "left_text",
           "settings": {
             "text": "<p>VICAREX Health is a premier global provider of high-quality medical supplies and wellness essentials, recognized for our commitment to excellence, customer satisfaction, and healthcare accessibility. Backed by over a decade of industry experience, we are a team of dedicated professionals unified by a passion for improving the way people access medical care.</p><p>We believe in transparency, compassion, and unwavering service. From individual households to caregivers and healthcare environments, we proudly support the needs of thousands of loyal and happy customers who rely on us for trustworthy products and dependable service.</p>"
           }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "left",
-        "color_scheme": "scheme-1",
-        "full_width": false,
-        "padding_top": 48,
-        "padding_bottom": 40
-      }
-    },
-    "what_we_do": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
+        },
+        "right_image": {
+          "type": "right_image",
           "settings": {
-            "heading": "⭐ WHAT WE DO",
-            "heading_size": "h1"
+            "image": ""
           }
         },
-        "text": {
-          "type": "text",
+        "right_heading": {
+          "type": "right_heading",
+          "settings": {
+            "heading": "⭐ WHAT WE DO"
+          }
+        },
+        "right_text": {
+          "type": "right_text",
           "settings": {
             "text": "<p>At VICAREX Health, we specialize in offering an extensive range of premium, non-prescription medical products through an advanced online platform supported by a knowledgeable, highly trained sales and customer-care team. Our catalog includes essential home-care items, clinical-support equipment, therapeutic care products, rehabilitative supplies, and comprehensive wellness solutions—all selected for their superior performance and professional medical standards.</p><p>We provide a modern, simplified, and customer-focused purchasing experience. Our digital systems make it easy for customers to research, compare, and order products with confidence, while our expert support team ensures personalized guidance at every stage. We are committed to making medical care more efficient, more accessible, and more dependable—anytime, anywhere.</p>"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "left_image",
+        "left_heading",
+        "left_text",
+        "right_image",
+        "right_heading",
+        "right_text"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "left",
+        "heading_size": "h1",
         "color_scheme": "scheme-1",
-        "full_width": false,
         "padding_top": 48,
         "padding_bottom": 40
       }
     },
-    "mission": {
-      "type": "rich-text",
+    "mission_vision": {
+      "type": "about-us-mission-vision",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "mission_image": {
+          "type": "mission_media",
           "settings": {
-            "heading": "⭐ OUR MISSION",
-            "heading_size": "h1"
+            "image": ""
           }
         },
-        "text": {
-          "type": "text",
+        "mission_heading": {
+          "type": "mission_heading",
+          "settings": {
+            "heading": "⭐ OUR MISSION"
+          }
+        },
+        "mission_text": {
+          "type": "mission_text",
           "settings": {
             "text": "<p>Our mission is to deliver world-class medical products with uncompromising quality, ensuring that every customer experiences exceptional care, dependable service, and complete satisfaction. We strive to enhance healthcare accessibility by offering a comprehensive selection of trustworthy medical supplies supported by professional guidance, fast delivery, and continuous innovation.</p>"
           }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "left",
-        "color_scheme": "scheme-1",
-        "full_width": false,
-        "padding_top": 48,
-        "padding_bottom": 40
-      }
-    },
-    "vision": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
+        },
+        "vision_image": {
+          "type": "vision_media",
           "settings": {
-            "heading": "⭐ OUR VISION",
-            "heading_size": "h1"
+            "image": ""
           }
         },
-        "text": {
-          "type": "text",
+        "vision_heading": {
+          "type": "vision_heading",
+          "settings": {
+            "heading": "⭐ OUR VISION"
+          }
+        },
+        "vision_text": {
+          "type": "vision_text",
           "settings": {
             "text": "<p>Our vision is to become the most trusted and widely recognized provider of premium medical supplies worldwide—empowering individuals, families, caregivers, and healthcare professionals with seamless access to the products they need to live healthier, safer, and more supported lives. We aim to redefine healthcare convenience through technology, reliability, and compassion.</p>"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "mission_image",
+        "mission_heading",
+        "mission_text",
+        "vision_image",
+        "vision_heading",
+        "vision_text"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "left",
+        "heading_size": "h1",
         "color_scheme": "scheme-1",
-        "full_width": false,
         "padding_top": 48,
         "padding_bottom": 60
       }
@@ -178,10 +183,8 @@
   "order": [
     "hero_section",
     "intro_section",
-    "who_we_are",
-    "what_we_do",
-    "mission",
-    "vision"
+    "who_we_are_what_we_do",
+    "mission_vision"
   ]
 }
 

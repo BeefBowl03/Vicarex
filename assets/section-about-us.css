@@ -131,10 +131,29 @@
   font-weight: 400;
 }
 
+.rich-text__image {
+  margin-bottom: 3rem;
+  width: 100%;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.rich-text__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 @media screen and (min-width: 750px) {
   .rich-text:nth-of-type(2) .rich-text__text {
     font-size: 1.8rem;
     line-height: 2;
+  }
+  
+  .rich-text__image {
+    margin-bottom: 4rem;
   }
 }
 

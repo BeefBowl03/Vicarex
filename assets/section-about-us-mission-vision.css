@@ -1,0 +1,159 @@
+/* About Us Mission Vision Section - Two Containers with Alternating Layout */
+
+.about-us-mission-vision {
+  z-index: 1;
+}
+
+.about-us-mission-vision__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.about-us-mission-vision__container:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 750px) {
+  .about-us-mission-vision__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 5rem;
+  }
+  
+  /* Container 1: Mission (left) + Image (right) - default order */
+  .about-us-mission-vision__container--mission {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Container 2: Image (left) + Vision (right) - reverse order */
+  .about-us-mission-vision__container--vision {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .about-us-mission-vision__container--vision .about-us-mission-vision__column--image {
+    order: 1;
+  }
+  
+  .about-us-mission-vision__container--vision .about-us-mission-vision__column--content {
+    order: 2;
+  }
+}
+
+.about-us-mission-vision__column {
+  width: 100%;
+}
+
+.about-us-mission-vision__image {
+  margin-bottom: 2.5rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.about-us-mission-vision__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.about-us-mission-vision__image--placeholder {
+  background-color: rgba(var(--color-foreground), 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.about-us-mission-vision__image--placeholder svg {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  opacity: 0.3;
+}
+
+@media screen and (min-width: 750px) {
+  .about-us-mission-vision__image--placeholder {
+    min-height: 400px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .about-us-mission-vision__image {
+    margin-bottom: 3rem;
+  }
+}
+
+.about-us-mission-vision__heading {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 2px solid rgba(var(--color-foreground), 0.12);
+  position: relative;
+  font-size: 3.2rem;
+}
+
+.about-us-mission-vision__heading::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: rgba(var(--color-foreground), 0.25);
+}
+
+@media screen and (max-width: 749px) {
+  .about-us-mission-vision__heading {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  
+  .about-us-mission-vision__heading::after {
+    width: 60px;
+    height: 2px;
+  }
+}
+
+.about-us-mission-vision__text {
+  font-size: 1.6rem;
+  line-height: 1.85;
+  color: rgba(var(--color-foreground), 0.88);
+}
+
+.about-us-mission-vision__text p {
+  margin-bottom: 1.8rem;
+}
+
+.about-us-mission-vision__text p:last-child {
+  margin-bottom: 0;
+}
+
+.about-us-mission-vision__text strong {
+  font-weight: 600;
+  color: rgba(var(--color-foreground), 1);
+}
+
+@media screen and (min-width: 750px) {
+  .about-us-mission-vision__text {
+    font-size: 1.7rem;
+    line-height: 1.9;
+  }
+}
+
+.about-us-mission-vision__text p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+@media screen and (max-width: 749px) {
+  .about-us-mission-vision__text p {
+    text-align: left;
+  }
+}
+
