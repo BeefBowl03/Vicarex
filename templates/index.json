@@ -33,7 +33,6 @@
         "slide_2": {
           "type": "slide",
           "settings": {
-            "image": "",
             "image_overlay_opacity": 0,
             "heading": "Slide 2 Heading",
             "heading_size": "h1",
@@ -51,7 +50,6 @@
         "slide_3": {
           "type": "slide",
           "settings": {
-            "image": "",
             "image_overlay_opacity": 0,
             "heading": "Slide 3 Heading",
             "heading_size": "h1",
@@ -69,7 +67,6 @@
         "slide_4": {
           "type": "slide",
           "settings": {
-            "image": "",
             "image_overlay_opacity": 0,
             "heading": "Slide 4 Heading",
             "heading_size": "h1",
@@ -382,19 +379,21 @@
       "blocks": {
         "image_d3HbBM": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/da378650-7c7a-47fc-bc87-91181c25a5cf.jpg"
+          }
         },
         "product_4Mpkez": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "collagen-retinol-rejuvenation-serum-retinol-anti-wrinkle",
             "second_image": false
           }
         },
         "collection_UmBGzV": {
           "type": "collection",
           "settings": {
-            "collection": "first-aid-emergency-safety"
+            "collection": "women-s-health"
           }
         }
       },
