@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero_section": {
@@ -35,13 +44,6 @@
     "intro_section": {
       "type": "image-with-text",
       "blocks": {
-        "heading_block": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "heading_size": "h1"
-          }
-        },
         "text_block": {
           "type": "text",
           "settings": {
@@ -54,7 +56,7 @@
         "text_block"
       ],
       "settings": {
-        "image": "",
+        "image": "shopify://shop_images/vic.png",
         "height": "small",
         "desktop_image_width": "full",
         "layout": "image_first",
@@ -74,9 +76,7 @@
       "blocks": {
         "left_image": {
           "type": "left_image",
-          "settings": {
-            "image": ""
-          }
+          "settings": {}
         },
         "left_heading": {
           "type": "left_heading",
@@ -92,9 +92,7 @@
         },
         "right_image": {
           "type": "right_image",
-          "settings": {
-            "image": ""
-          }
+          "settings": {}
         },
         "right_heading": {
           "type": "right_heading",
@@ -130,7 +128,7 @@
         "mission_image": {
           "type": "mission_media",
           "settings": {
-            "image": ""
+            "image": "shopify://shop_images/worker.png"
           }
         },
         "mission_heading": {
@@ -148,7 +146,7 @@
         "vision_image": {
           "type": "vision_media",
           "settings": {
-            "image": ""
+            "image": "shopify://shop_images/maternity.png"
           }
         },
         "vision_heading": {
@@ -187,4 +185,3 @@
     "mission_vision"
   ]
 }
-
