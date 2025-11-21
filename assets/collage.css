@@ -1,3 +1,17 @@
+/* Align collage section with featured category grid above */
+.page-width:has(.collage) {
+  max-width: 1600px;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .page-width:has(.collage) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
 .collage-wrapper-title {
   margin-top: 0;
   margin-bottom: 3rem;
@@ -152,6 +166,12 @@
   height: 100%;
   overflow: hidden;
   border-radius: calc(var(--border-radius) - var(--border-width) - var(--image-padding));
+}
+
+/* Make collage images contain instead of cover */
+.collage-card .media img {
+  object-fit: contain;
+  object-position: center center;
 }
 
 .collage-card .deferred-media {
