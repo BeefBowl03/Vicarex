@@ -26,14 +26,29 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.45 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.45 | round: 0 }}px;
+  }
+
+  #collection-{{ section.id }} .card__inner.ratio::before,
+  #collection-{{ section.id }} .card.ratio::before {
+    padding-bottom: min(var(--ratio-percent, 100%), 80%);
+  }
+
+  #collection-{{ section.id }} .card__media img {
+    height: 100%;
+    object-fit: cover;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-top: {{ section.settings.padding_top | times: 0.7 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.7 | round: 0 }}px;
+    }
+
+    #collection-{{ section.id }} .card__inner.ratio::before,
+    #collection-{{ section.id }} .card.ratio::before {
+      padding-bottom: min(var(--ratio-percent, 100%), 65%);
     }
   }
 {%- endstyle -%}
