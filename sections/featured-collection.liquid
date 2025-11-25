@@ -26,29 +26,30 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.45 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.45 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.225 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.225 | round: 0 }}px;
   }
 
   #collection-{{ section.id }} .card__inner.ratio::before,
   #collection-{{ section.id }} .card.ratio::before {
-    padding-bottom: min(var(--ratio-percent, 100%), 80%);
+    padding-bottom: min(var(--ratio-percent, 100%), 40%);
   }
 
   #collection-{{ section.id }} .card__media img {
     height: 100%;
     object-fit: cover;
+    object-position: center top;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.7 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.7 | round: 0 }}px;
+      padding-top: {{ section.settings.padding_top | times: 0.35 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.35 | round: 0 }}px;
     }
 
     #collection-{{ section.id }} .card__inner.ratio::before,
     #collection-{{ section.id }} .card.ratio::before {
-      padding-bottom: min(var(--ratio-percent, 100%), 65%);
+      padding-bottom: min(var(--ratio-percent, 100%), 32%);
     }
   }
 {%- endstyle -%}

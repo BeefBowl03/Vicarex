@@ -171,19 +171,19 @@
 /* Make collage images contain instead of cover */
 .collage-card .media img {
   object-fit: cover;
-  object-position: center center;
+  object-position: center top;
 }
 
 /* Keep collage heights closer to featured product section */
 @media screen and (max-width: 749px) {
   .collage .ratio::before {
-    padding-bottom: min(var(--ratio-percent, 100%), 85%);
+    padding-bottom: min(var(--ratio-percent, 100%), 40%);
   }
 }
 
 @media screen and (min-width: 750px) {
   .collage .ratio::before {
-    padding-bottom: min(var(--ratio-percent, 100%), 65%);
+    padding-bottom: min(var(--ratio-percent, 100%), 32%);
   }
 }
 
