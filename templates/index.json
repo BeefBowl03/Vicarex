@@ -407,7 +407,7 @@
       ],
       "name": "t:sections.collage.presets.name",
       "settings": {
-        "heading": "Multimedia collage",
+        "heading": "Featured Collection",
         "heading_size": "h1",
         "desktop_layout": "left",
         "mobile_layout": "column",
@@ -425,6 +425,47 @@
         "email": "vicarexhealth@gmail.com",
         "description": "Need product guidance or sourcing support? Our Vicarex care team is on standby around the clock—reach out any time."
       }
+    },
+    "collection_list_6Q9eJC": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_XR4dXQ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "general-medical-supplies"
+          }
+        },
+        "featured_collection_DGkKhH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "maternity-essentials"
+          }
+        },
+        "featured_collection_7bP9KF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "eye-ear-nose-care"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_XR4dXQ",
+        "featured_collection_DGkKhH",
+        "featured_collection_7bP9KF"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -435,6 +476,7 @@
     "image_with_text_GiyNVJ",
     "featured_category_grid",
     "collage_D98RTU",
-    "talk_to_specialist"
+    "talk_to_specialist",
+    "collection_list_6Q9eJC"
   ]
 }
