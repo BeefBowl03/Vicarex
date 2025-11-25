@@ -837,6 +837,7 @@ class SlideshowComponent extends SliderComponent {
     this.sliderFirstItemNode = this.slider.querySelector('.slideshow__slide');
     if (this.sliderItemsToShow.length > 0) this.currentPage = 1;
 
+    this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     this.announcementBarSlider = this.querySelector('.announcement-bar-slider');
     // Value below should match --duration-announcement-bar CSS value
     this.announcerBarAnimationDelay = this.announcementBarSlider ? 250 : 0;
