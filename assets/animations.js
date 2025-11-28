@@ -15,8 +15,12 @@ function onIntersection(elements, observer) {
       }
       observer.unobserve(elementTarget);
     } else {
-      element.target.classList.add(SCROLL_ANIMATION_OFFSCREEN_CLASSNAME);
-      element.target.classList.remove(SCROLL_ANIMATION_CANCEL_CLASSNAME);
+      // Only add offscreen class if element is truly below the viewport
+      const rect = element.target.getBoundingClientRect();
+      if (rect.top > window.innerHeight + 200) {
+        element.target.classList.add(SCROLL_ANIMATION_OFFSCREEN_CLASSNAME);
+        element.target.classList.remove(SCROLL_ANIMATION_CANCEL_CLASSNAME);
+      }
     }
   });
 }
@@ -34,8 +38,19 @@ function initializeScrollAnimationTrigger(rootEl = document, isDesignModeEvent =
 
   const observer = new IntersectionObserver(onIntersection, {
     rootMargin: '0px 0px -50px 0px',
+    threshold: 0.01
   });
-  animationTriggerElements.forEach((element) => observer.observe(element));
+  
+  // Check initial visibility before observing
+  animationTriggerElements.forEach((element) => {
+    const rect = element.getBoundingClientRect();
+    const isInViewport = rect.top < window.innerHeight + 100 && rect.bottom > -100;
+    if (isInViewport) {
+      // If element is in viewport, remove offscreen class immediately
+      element.classList.remove(SCROLL_ANIMATION_OFFSCREEN_CLASSNAME);
+    }
+    observer.observe(element);
+  });
 }
 
 // Zoom in animation logic

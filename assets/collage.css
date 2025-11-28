@@ -19,6 +19,18 @@
 
 .collage {
   display: grid;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.collage-wrapper-title {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.collage__item {
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .collage__item > * {

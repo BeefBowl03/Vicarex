@@ -16,10 +16,33 @@
 .list-menu__item--active {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
+  text-decoration-thickness: 0.15rem;
+  font-weight: 500;
+  position: relative;
+  transition: text-decoration-thickness 0.3s ease, color 0.3s ease;
+}
+
+.list-menu__item--active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(var(--color-foreground), 0.8), rgba(var(--color-foreground), 0.4));
+  border-radius: 2px;
 }
 
 .list-menu__item--active:hover {
   text-decoration-thickness: 0.2rem;
+}
+
+.list-menu__item {
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.list-menu__item:hover {
+  transform: translateY(-1px);
 }
 
 .list-menu--disclosure.localization-selector {

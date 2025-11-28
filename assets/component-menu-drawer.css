@@ -49,7 +49,7 @@ menu-drawer > details[open] > summary::before {
 
 .js details[open] > .menu-drawer,
 .js details[open] > .menu-drawer__submenu {
-  transition: transform var(--duration-default) ease, visibility var(--duration-default) ease;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .js details[open].menu-opening > .menu-drawer,
@@ -102,6 +102,9 @@ details[open].menu-opening > .menu-drawer__submenu {
   padding: 1.1rem 3rem;
   text-decoration: none;
   font-size: 1.8rem;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  display: block;
 }
 
 .menu-drawer summary.menu-drawer__menu-item {
@@ -114,11 +117,29 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__menu-item:hover,
 .menu-drawer__close-button:hover {
   color: rgb(var(--color-foreground));
-  background-color: rgba(var(--color-foreground), 0.04);
+  background-color: rgba(var(--color-foreground), 0.06);
+  transform: translateX(4px);
+}
+
+.menu-drawer__menu-item--active {
+  background-color: rgba(var(--color-foreground), 0.08);
+  font-weight: 500;
+}
+
+.menu-drawer__menu-item--active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: rgb(var(--color-foreground));
+  opacity: 0.6;
 }
 
 .menu-drawer__menu-item--active:hover {
-  background-color: rgba(var(--color-foreground), 0.08);
+  background-color: rgba(var(--color-foreground), 0.1);
+  transform: translateX(6px);
 }
 
 .js .menu-drawer__menu-item .icon-caret {
@@ -131,6 +152,11 @@ details[open].menu-opening > .menu-drawer__submenu {
   right: 3rem;
   top: 50%;
   transform: translateY(-50%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-drawer__menu-item:hover > .svg-wrapper {
+  transform: translateY(-50%) translateX(4px);
 }
 
 .js .menu-drawer__submenu {
@@ -143,6 +169,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   z-index: 1;
   transform: translateX(100%);
   visibility: hidden;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .js .menu-drawer__submenu .menu-drawer__submenu {
@@ -161,6 +188,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   text-align: left;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s ease;
 }
 
 .menu-drawer__close-button .svg-wrapper {

@@ -52,6 +52,11 @@
   display: block;
 }
 
+.collection--empty {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
 .collection--empty .title-wrapper {
   margin-top: 10rem;
   margin-bottom: 15rem;
@@ -65,6 +70,15 @@
 
 .collection__description > * {
   margin: 0;
+}
+
+.collection .product-grid {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.collection.loading .product-grid {
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 .collection__title.title-wrapper {

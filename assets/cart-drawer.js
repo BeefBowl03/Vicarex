@@ -3,20 +3,45 @@ class CartDrawer extends HTMLElement {
     super();
 
     this.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close());
-    this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
+    this.cartIconHandler = null;
+  }
+
+  connectedCallback() {
+    if (this.querySelector('#CartDrawer-Overlay')) {
+      this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
+    }
     this.setHeaderCartIconAccessibility();
+    
+    // Also try to set it up when DOM is ready (fallback)
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => this.setHeaderCartIconAccessibility());
+    } else {
+      // DOM already loaded, try again
+      setTimeout(() => this.setHeaderCartIconAccessibility(), 100);
+    }
   }
 
   setHeaderCartIconAccessibility() {
     const cartLink = document.querySelector('#cart-icon-bubble');
     if (!cartLink) return;
 
+    // Remove existing handler if any
+    if (this.cartIconHandler) {
+      cartLink.removeEventListener('click', this.cartIconHandler);
+    }
+
     cartLink.setAttribute('role', 'button');
     cartLink.setAttribute('aria-haspopup', 'dialog');
-    cartLink.addEventListener('click', (event) => {
+    
+    // Store handler reference
+    this.cartIconHandler = (event) => {
       event.preventDefault();
+      event.stopPropagation();
       this.open(cartLink);
-    });
+      return false;
+    };
+    
+    cartLink.addEventListener('click', this.cartIconHandler);
     cartLink.addEventListener('keydown', (event) => {
       if (event.code.toUpperCase() === 'SPACE') {
         event.preventDefault();

@@ -48,14 +48,26 @@
   background-color: inherit;
 }
 
+.search__button,
+.reset__button {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+}
+
+.search__button:hover,
+.reset__button:hover {
+  transform: scale(1.05);
+  background-color: rgba(var(--color-foreground), 0.05);
+}
+
 .search__button:hover .icon,
 .reset__button:hover .icon {
-  transform: scale(1.07);
+  transform: scale(1.1);
 }
 
 .search__button .icon {
   height: 1.8rem;
   width: 1.8rem;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .reset__button .icon.icon-close {

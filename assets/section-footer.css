@@ -345,12 +345,18 @@
   color: rgb(var(--color-foreground));
 }
 
+.footer-block__details-content .list-menu__item--link,
+.copyright__content a {
+  transition: color 0.3s ease, text-decoration-thickness 0.3s ease;
+}
+
 @media screen and (min-width: 750px) {
   .footer-block__details-content .list-menu__item--link:hover,
   .copyright__content a:hover {
     color: rgb(var(--color-foreground));
     text-decoration: underline;
     text-underline-offset: 0.3rem;
+    transition: color 0.3s ease, text-decoration-thickness 0.3s ease;
   }
 
   .footer-block__details-content .list-menu__item--active:hover {

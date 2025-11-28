@@ -3,6 +3,18 @@
   height: 100%;
   position: relative;
   text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card-wrapper:hover {
+    transform: translateY(-4px) scale(1.02);
+  }
+  
+  .card-wrapper:active {
+    transform: translateY(-2px) scale(1.01);
+    transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .card {
@@ -58,8 +70,24 @@
   top: calc(var(--border-width) * -1);
   left: calc(var(--border-width) * -1);
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius)
+  box-shadow: 
+    0 2px 8px rgba(var(--color-shadow), calc(var(--shadow-opacity) * 0.4)),
+    0 4px 16px rgba(var(--color-shadow), calc(var(--shadow-opacity) * 0.2)),
+    var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius)
     rgba(var(--color-shadow), var(--shadow-opacity));
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card-wrapper:hover .card--card:after,
+  .card-wrapper:hover .card--standard .card__inner:after {
+    box-shadow: 
+      0 4px 16px rgba(var(--color-shadow), calc(var(--shadow-opacity) * 0.5)),
+      0 8px 32px rgba(var(--color-shadow), calc(var(--shadow-opacity) * 0.3)),
+      0 16px 64px rgba(var(--color-shadow), calc(var(--shadow-opacity) * 0.15)),
+      var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius)
+      rgba(var(--color-shadow), var(--shadow-opacity));
+  }
 }
 
 /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
@@ -294,6 +322,34 @@
   object-fit: cover;
   object-position: center center;
   width: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+  opacity: 1;
+}
+
+.card__media .media img[loading="lazy"] {
+  opacity: 1;
+}
+
+.card__media .media img[loading="lazy"].loading {
+  opacity: 0;
+  animation: fadeInImage 0.6s ease forwards;
+}
+
+@keyframes fadeInImage {
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card-wrapper:hover .card__media .media img {
+    transform: scale(1.05);
+  }
 }
 
 .card__inner:not(.ratio) > .card__content {
