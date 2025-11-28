@@ -377,76 +377,6 @@
         "padding_bottom": 48
       }
     },
-    "featured_product_iTqVrP": {
-      "type": "featured-product",
-      "blocks": {
-        "text_CGAMTc": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_ryjzJx": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_FgEkte": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_VbVP4z": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector_itbeXT": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_EiVRLA": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_j4JGwy": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_CGAMTc",
-        "title_ryjzJx",
-        "price_FgEkte",
-        "variant_picker_VbVP4z",
-        "quantity_selector_itbeXT",
-        "buy_buttons_EiVRLA",
-        "share_j4JGwy"
-      ],
-      "name": "t:sections.featured-product.presets.name",
-      "settings": {
-        "product": "20-30g-lip-skin-care-products-moisturizing-lip",
-        "color_scheme": "",
-        "secondary_background": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "talk_to_specialist": {
       "type": "talk-to-specialist",
       "settings": {
@@ -459,27 +389,20 @@
     "collection_list_6Q9eJC": {
       "type": "collection-list",
       "blocks": {
-        "featured_collection_XR4dXQ": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "skin-treatments"
-          }
-        },
         "featured_collection_DGkKhH": {
           "type": "featured_collection",
           "settings": {
-            "collection": "maternity-essentials"
+            "collection": "vitamins-and-supplements"
           }
         },
         "featured_collection_7bP9KF": {
           "type": "featured_collection",
           "settings": {
-            "collection": "eye-ear-nose-care"
+            "collection": "health-and-beauty"
           }
         }
       },
       "block_order": [
-        "featured_collection_XR4dXQ",
         "featured_collection_DGkKhH",
         "featured_collection_7bP9KF"
       ],
@@ -505,7 +428,6 @@
     "image_with_text_who_we_are",
     "image_with_text_GiyNVJ",
     "featured_category_grid",
-    "featured_product_iTqVrP",
     "talk_to_specialist",
     "collection_list_6Q9eJC"
   ]
