@@ -1441,44 +1441,57 @@ button.shopify-payment-button__button--unbranded {
   }
 
   #dummy-chat-button::after,
-  .shopify-chat-button__button::after {
-    content: '';
-    position: absolute;
-    inset: -20px;
-    border-radius: 999px;
-    background: radial-gradient(circle, rgba(var(--glow-accent), 0.6) 0%, rgba(var(--glow-accent), 0.3) 40%, rgba(var(--glow-accent), 0) 80%);
-    opacity: 0.9;
-    animation: chatGlowPulse 2s ease-in-out infinite;
-    pointer-events: none;
-    z-index: -1;
+  .shopify-chat-button__button::after,
+  [data-shopify-chat-button]::after,
+  [class*="chat-button"]::after,
+  [class*="ChatButton"]::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: -20px !important;
+    border-radius: 999px !important;
+    background: radial-gradient(circle, rgba(var(--glow-accent), 0.6) 0%, rgba(var(--glow-accent), 0.3) 40%, rgba(var(--glow-accent), 0) 80%) !important;
+    opacity: 0.9 !important;
+    animation: chatGlowPulse 2s ease-in-out infinite !important;
+    pointer-events: none !important;
+    z-index: -1 !important;
   }
 }
 
 #dummy-chat-button button,
 .shopify-chat-button__button button,
-#dummy-chat-button iframe {
+#dummy-chat-button iframe,
+#dummy-chat-button,
+.shopify-chat-button__button,
+[data-shopify-chat-button],
+[class*="chat-button"],
+[class*="ChatButton"],
+[class*="shopify-chat"] button,
+[class*="shopify-chat"] iframe {
   border-radius: 999px !important;
   box-shadow: 
-    0 8px 16px rgba(var(--glow-accent), 0.5),
-    0 16px 32px rgba(var(--glow-accent), 0.4),
-    0 0 30px rgba(var(--glow-accent), 0.7),
-    0 0 60px rgba(var(--glow-accent), 0.5),
-    0 0 90px rgba(var(--glow-accent), 0.3);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
+    0 8px 16px rgba(var(--glow-accent), 0.5) !important,
+    0 16px 32px rgba(var(--glow-accent), 0.4) !important,
+    0 0 30px rgba(var(--glow-accent), 0.7) !important,
+    0 0 60px rgba(var(--glow-accent), 0.5) !important,
+    0 0 90px rgba(var(--glow-accent), 0.3) !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
 }
 
 @media (hover: hover) and (pointer: fine) {
   #dummy-chat-button button:hover,
-  .shopify-chat-button__button button:hover {
-    transform: translateY(-4px) scale(1.05);
+  .shopify-chat-button__button button:hover,
+  [class*="chat-button"]:hover,
+  [class*="ChatButton"]:hover,
+  [class*="shopify-chat"] button:hover {
+    transform: translateY(-4px) scale(1.05) !important;
     box-shadow: 
-      0 12px 24px rgba(var(--glow-accent), 0.6),
-      0 24px 48px rgba(var(--glow-accent), 0.5),
-      0 0 50px rgba(var(--glow-accent), 0.9),
-      0 0 100px rgba(var(--glow-accent), 0.7),
-      0 0 150px rgba(var(--glow-accent), 0.5),
-      0 0 200px rgba(var(--glow-accent), 0.3);
+      0 12px 24px rgba(var(--glow-accent), 0.6) !important,
+      0 24px 48px rgba(var(--glow-accent), 0.5) !important,
+      0 0 50px rgba(var(--glow-accent), 0.9) !important,
+      0 0 100px rgba(var(--glow-accent), 0.7) !important,
+      0 0 150px rgba(var(--glow-accent), 0.5) !important,
+      0 0 200px rgba(var(--glow-accent), 0.3) !important;
   }
 }
 
